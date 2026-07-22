@@ -1,0 +1,209 @@
+/* ─── Navbar ─── */
+.navbar {
+  position: sticky;
+  top: 0;
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-xl);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 50;
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__title {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* Role Switcher Pill */
+.navbar__role-switcher {
+  position: relative;
+}
+
+.navbar__role-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.navbar__role-pill:hover {
+  background: var(--primary-50);
+  border-color: var(--primary-400);
+}
+
+.navbar__role-pill-text {
+  font-size: 0.8125rem;
+  color: var(--text-primary);
+}
+
+.navbar__role-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  width: 240px;
+  padding: 8px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  z-index: 100;
+}
+
+.navbar__role-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.navbar__role-option:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.navbar__role-option.active {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.navbar__role-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Search */
+.navbar__search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-full);
+  min-width: 220px;
+  color: var(--text-tertiary);
+  transition: all 0.25s;
+}
+
+.navbar__search:focus-within {
+  border-color: var(--primary-500);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.navbar__search input {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  width: 100%;
+}
+
+.navbar__search input::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* Icon Button */
+.navbar__icon-btn {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  transition: all 0.2s;
+  background: rgba(0,0,0,0.02);
+}
+
+.navbar__icon-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-primary);
+}
+
+.navbar__notification-dot {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  background: var(--error);
+  border-radius: 50%;
+  border: 2px solid var(--bg-surface);
+}
+
+/* Profile */
+.navbar__profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 14px 6px 6px;
+  border-radius: var(--radius-full);
+  transition: background 0.2s;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.navbar__profile:hover {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0,0,0,0.05);
+}
+
+.navbar__avatar {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar__profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__profile-name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.navbar__profile-role {
+  font-size: 0.6875rem;
+  color: var(--text-tertiary);
+  font-weight: 600;
+}

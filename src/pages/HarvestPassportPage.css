@@ -1,0 +1,55 @@
+/* ─── Harvest Passport CSS ─── */
+.passport-page {
+  padding-bottom: var(--space-2xl);
+}
+
+.passport-page__grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-lg);
+}
+
+.passport-sidebar {
+  border-radius: var(--radius-xl);
+}
+
+.passport-item {
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  background: rgba(0, 0, 0, 0.01);
+}
+
+.passport-item:hover {
+  background: rgba(16, 185, 129, 0.04);
+}
+
+.passport-item.active {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.passport-main {
+  border-radius: var(--radius-2xl);
+  border: 2px solid rgba(16, 185, 129, 0.2);
+}
+
+.passport-badge-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: #f0fdf4;
+  color: #15803d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bbf7d0;
+}
+
+.qr-box {
+  background: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .passport-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,195 @@
+/* ─── Karsa Page CSS ─── */
+.karsa {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--navbar-height) - 48px);
+}
+
+.karsa__header {
+  margin-bottom: var(--space-lg);
+}
+
+.karsa__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+}
+
+.karsa__container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+}
+
+.karsa__chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.karsa__msg-wrapper {
+  display: flex;
+  gap: 12px;
+  max-width: 80%;
+}
+
+.karsa__msg-wrapper.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.karsa__msg-wrapper.karsa-bot {
+  align-self: flex-start;
+}
+
+.karsa__msg-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.karsa__msg-wrapper.user .karsa__msg-avatar {
+  background: var(--primary-600);
+  color: white;
+}
+
+.karsa__msg-content {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 14px 18px;
+  border-radius: 18px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.karsa__msg-wrapper.user .karsa__msg-content {
+  background: var(--primary-600);
+  color: white;
+  border-top-right-radius: 4px;
+}
+
+.karsa__msg-wrapper.karsa-bot .karsa__msg-content {
+  border-top-left-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+}
+
+.karsa__lang-badge {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  background: rgba(245, 158, 11, 0.15);
+  color: #b45309;
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+
+.karsa__speech-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: var(--primary-600);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+  font-weight: 600;
+  padding: 0;
+}
+
+.karsa__speech-btn:hover {
+  text-decoration: underline;
+}
+
+/* Input Area */
+.karsa__input-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.karsa__mic-btn {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--primary-600);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.karsa__mic-btn.recording {
+  background: var(--error);
+  color: white;
+  border-color: var(--error);
+}
+
+.karsa__pulse-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid var(--error);
+  animation: pulse 1.2s cubic-bezier(0.8, 0, 0, 1) infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 1; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+.karsa__input {
+  flex: 1;
+  background: #ffffff;
+}
+
+.karsa__send-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--primary-600);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.karsa__send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .karsa__msg-wrapper {
+    max-width: 95%;
+  }
+}

@@ -1,0 +1,16 @@
+/* ─── Split Payout CSS ─── */
+.payout {
+  padding-bottom: var(--space-2xl);
+}
+
+.payout__header {
+  margin-bottom: var(--space-xl);
+}
+
+.w-full { width: 100%; }
+.overflow-x-auto { overflow-x: auto; }
+.text-left { text-align: left; }
+.p-sm { padding: 8px 12px; }
+.p-md { padding: 12px 16px; }
+.p-lg { padding: 20px; }
+.p-xl { padding: 28px; }

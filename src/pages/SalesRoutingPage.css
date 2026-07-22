@@ -1,0 +1,18 @@
+/* ─── Sales Routing CSS ─── */
+.routing {
+  padding-bottom: var(--space-2xl);
+}
+
+.routing__header {
+  margin-bottom: var(--space-xl);
+}
+
+.bg-success-50 {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .routing .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,74 @@
+/* ─── Crowdfunding CSS ─── */
+.crowdfunding {
+  padding-bottom: var(--space-2xl);
+}
+
+.crowdfunding__header {
+  margin-bottom: var(--space-xl);
+}
+
+.crowdfunding__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.crowdfunding__card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.crowdfunding__progress-container {
+  background: rgba(0, 0, 0, 0.02);
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.crowdfunding__progress-bar {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.crowdfunding__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-500), var(--primary-600));
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 32px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-2xl);
+}
+
+@media (max-width: 1024px) {
+  .crowdfunding__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .crowdfunding__grid {
+    grid-template-columns: 1fr;
+  }
+}

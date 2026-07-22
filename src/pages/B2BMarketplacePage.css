@@ -1,0 +1,26 @@
+/* ─── B2B Marketplace CSS ─── */
+.marketplace-page {
+  padding-bottom: var(--space-2xl);
+}
+
+.marketplace-page__grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: var(--space-xl);
+}
+
+.marketplace-form-card {
+  border-radius: var(--radius-2xl);
+  height: fit-content;
+}
+
+.spec-box {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 1024px) {
+  .marketplace-page__grid {
+    grid-template-columns: 1fr;
+  }
+}
