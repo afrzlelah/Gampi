@@ -32,6 +32,10 @@ export default function Navbar({ title }) {
   const isSwitchStep = isTourActive && Boolean(targetRole);
 
   const handleRoleSelect = (roleId) => {
+    if (isTourActive && !isSwitchStep) {
+      console.log("[Tour Guard] Ganti role dilarang di step ini. Selesaikan aksi wajib dulu!");
+      return;
+    }
     if (isSwitchStep && roleId !== targetRole) return;
 
     login(roleId);
@@ -73,14 +77,23 @@ export default function Navbar({ title }) {
         <div className="navbar__role-switcher">
           <button 
             className={`navbar__role-pill ${isSwitchStep ? 'pulse-gold-highlight' : ''}`}
-            onClick={() => setShowRoleMenu(!showRoleMenu)}
-            title="Ganti Peran Demo"
-            style={isSwitchStep ? {
-              border: '2.5px solid #10b981',
-              boxShadow: '0 0 20px rgba(16, 185, 129, 0.8)',
-              background: 'rgba(16, 185, 129, 0.1)',
-              animation: 'pulse 1.5s infinite'
-            } : {}}
+            onClick={() => {
+              if (isTourActive && !isSwitchStep) return;
+              setShowRoleMenu(!showRoleMenu);
+            }}
+            title={isTourActive && !isSwitchStep ? "Ganti Peran Dikunci - Selesaikan Aksi Layar Dulu" : "Ganti Peran Demo"}
+            style={
+              isTourActive && !isSwitchStep ? {
+                cursor: 'not-allowed',
+                opacity: 0.7,
+                filter: 'grayscale(0.5)'
+              } : isSwitchStep ? {
+                border: '2.5px solid #10b981',
+                boxShadow: '0 0 20px rgba(16, 185, 129, 0.8)',
+                background: 'rgba(16, 185, 129, 0.1)',
+                animation: 'pulse 1.5s infinite'
+              } : {}
+            }
           >
             <span className="dot-pulse" style={{ background: user?.color || 'var(--primary-500)' }} />
             <span className="navbar__role-pill-text">
@@ -89,7 +102,7 @@ export default function Navbar({ title }) {
                   👉 GANTI ROLE: {STEP_ROLE_LABEL[currentStep] || 'Pilih Role'}
                 </strong>
               ) : (
-                <>Role: <strong>{user?.roleLabel || 'Petani'}</strong></>
+                <>Role: <strong>{user?.roleLabel || 'Petani'}</strong> {(isTourActive && !isSwitchStep) && <Lock size={12} className="inline ml-xs text-secondary" />}</>
               )}
             </span>
             <ChevronDown size={14} />
@@ -108,7 +121,7 @@ export default function Navbar({ title }) {
                   {isSwitchStep ? `👉 Pilih Peran ${STEP_ROLE_LABEL[currentStep]}` : 'Pilih Peran Demo'}
                 </div>
                 {AVAILABLE_ROLES.map((r) => {
-                  const isDisabledInTour = isSwitchStep && r.id !== targetRole;
+                  const isDisabledInTour = isTourActive && (!isSwitchStep || r.id !== targetRole);
 
                   return (
                     <button

@@ -166,7 +166,14 @@ export default function ForwardContractPage() {
                       </div>
                     </div>
                     <div className="flex gap-md">
-                      <button className="btn btn-error w-full" onClick={handleReject}>Tolak Kontrak Ini</button>
+                      <button 
+                        className={`btn btn-error w-full ${isTourActive && currentStep === STEPS.BUYER_APPROVE_CONTRACT ? 'disabled-link' : ''}`} 
+                        onClick={handleReject}
+                        style={isTourActive && currentStep === STEPS.BUYER_APPROVE_CONTRACT ? { cursor: 'not-allowed', opacity: 0.4 } : {}}
+                        disabled={isTourActive && currentStep === STEPS.BUYER_APPROVE_CONTRACT}
+                      >
+                        Tolak Kontrak Ini {isTourActive && currentStep === STEPS.BUYER_APPROVE_CONTRACT && "🔒"}
+                      </button>
                       <button 
                         className={`btn btn-primary w-full ${isTourActive && currentStep === STEPS.BUYER_APPROVE_CONTRACT ? 'pulse-gold-highlight' : ''}`} 
                         onClick={handleApprove}
