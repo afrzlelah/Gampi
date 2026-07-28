@@ -66,7 +66,7 @@ export default function KarsaPage() {
     } else {
       responseText = isJavanese
         ? 'Kula AI Karsa, siap mbantu pencatatan tani Pak Suharto. Wonten laporan panen utawi pupuk ingkang badhe dicatat?'
-        : 'Saya AI Karsa, asisten suara Anda. Saya telah mencatat laporan Anda ke ekosistem AGRIDAYA.';
+        : 'Saya AI Karsa, asisten suara Anda. Saya telah mencatat laporan Anda ke ekosistem GAMPI.';
     }
 
     setMessages(prev => [...prev, { role: 'karsa', text: responseText, lang: isJavanese ? 'jw' : 'id' }]);

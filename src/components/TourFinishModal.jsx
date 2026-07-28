@@ -31,10 +31,10 @@ export default function TourFinishModal() {
             <Sparkles size={14} /> DEMO PANDUAN SIMULASI SELESAI
           </span>
 
-          <h2 className="text-h1 mb-xs" style={{ color: '#047857' }}>Selamat! Anda Telah Menyaksikan Alur Ekosistem AGRIDAYA 🎉</h2>
+          <h2 className="text-h1 mb-xs" style={{ color: '#047857' }}>Selamat! Anda Telah Menyaksikan Alur Ekosistem GAMPI 🎉</h2>
 
           <p className="text-caption mb-lg text-secondary" style={{ fontSize: '0.9375rem', lineHeight: 1.6 }}>
-            Anda telah berhasil menyusuri seluruh rantai pasok digital AGRIDAYA:
+            Anda telah berhasil menyusuri seluruh rantai pasok digital GAMPI:
             <br />
             <strong>1. Petani</strong> (Buat Paspor & Crowdfunding) ➔ <strong>2. AI Admin</strong> (Verifikasi Mutu) ➔ <strong>3. Pembeli B2B</strong> (Kunci Kontrak) ➔ <strong>4. Investor</strong> (Pendanaan Saprotan & ROI).
           </p>

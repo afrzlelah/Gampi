@@ -32,7 +32,7 @@ export default function SplitPayoutPage() {
           <p className="text-caption">
             {isFarmer 
               ? 'Riwayat penerimaan dana hasil penjualan komoditas panen Anda (Bagi Hasil 60% Bersih)'
-              : (isInvestor ? 'Riwayat imbal hasil investasi (Bagi Hasil 35% Bersih)' : 'Ringkasan distribusi dana otomatis seluruh ekosistem AGRIDAYA')}
+              : (isInvestor ? 'Riwayat imbal hasil investasi (Bagi Hasil 35% Bersih)' : 'Ringkasan distribusi dana otomatis seluruh ekosistem GAMPI')}
           </p>
         </div>
       </div>

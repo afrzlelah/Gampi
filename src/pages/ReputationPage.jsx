@@ -16,7 +16,7 @@ export default function ReputationPage() {
       <div className="reputation__header">
         <div>
           <h2 className="text-h2">Reputation Score</h2>
-          <p className="text-caption">Sistem penilaian performa petani berbasis data transaksi dan aktivitas di ekosistem AGRIDAYA.</p>
+          <p className="text-caption">Sistem penilaian performa petani berbasis data transaksi dan aktivitas di ekosistem GAMPI.</p>
         </div>
       </div>
 

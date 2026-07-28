@@ -61,7 +61,7 @@ export default function SmartMatchingPage() {
             System Automated Smart Demand Matching
             <span className="badge badge-primary" style={{ fontSize: '0.75rem' }}>Backend Algorithm</span>
           </h2>
-          <p className="text-caption">Pencocokan otomatis hulu (Supply Panen Petani) dengan hilir (Demand B2B) oleh backend AGRIDAYA</p>
+          <p className="text-caption">Pencocokan otomatis hulu (Supply Panen Petani) dengan hilir (Demand B2B) oleh backend GAMPI</p>
         </div>
         <motion.button 
           className="btn btn-primary" 

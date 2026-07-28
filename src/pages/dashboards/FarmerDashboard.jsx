@@ -155,7 +155,7 @@ export default function FarmerDashboard() {
                   </div>
                   <h3 className="text-h2 mb-xs">Wajib Buat Paspor Panen Terlebih Dahulu!</h3>
                   <p className="text-caption mb-lg">
-                    Sesuai standar ekosistem AGRIDAYA, Anda **tidak dapat menjual hasil panen secara langsung** tanpa sertifikasi <strong>Harvest Passport</strong> yang terverifikasi AI.
+                    Sesuai standar ekosistem GAMPI, Anda **tidak dapat menjual hasil panen secara langsung** tanpa sertifikasi <strong>Harvest Passport</strong> yang terverifikasi AI.
                   </p>
                   <div className="flex justify-center gap-md">
                     <button className="btn btn-ghost" onClick={() => setShowSellModal(false)}>Batal</button>

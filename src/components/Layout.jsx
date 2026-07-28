@@ -32,7 +32,7 @@ export default function Layout() {
   const navigate = useNavigate();
   const { isTourActive, currentStep } = useTour();
 
-  const title = pageTitles[location.pathname] || 'AGRIDAYA';
+  const title = pageTitles[location.pathname] || 'GAMPI';
 
   // --- STRICT TOUR GUARD ---
   // Mencegah juri mengganti URL secara manual atau nge-bug keluar dari alur tour

@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// AGRIDAYA — Mock Data for Simulation Demo
+// GAMPI — Mock Data for Simulation Demo
 // ═══════════════════════════════════════════════════════════════
 
 export const farmers = [

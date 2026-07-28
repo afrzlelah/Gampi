@@ -91,7 +91,7 @@ export default function Sidebar({ collapsed, onToggle }) {
           <AnimatePresence>
             {!collapsed && (
               <motion.div className="sidebar__logo-text" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -10 }} transition={{ duration: 0.2 }}>
-                <span className="sidebar__brand">AGRIDAYA</span>
+                <span className="sidebar__brand">GAMPI</span>
                 <span className="sidebar__subtitle">Ecosystem</span>
               </motion.div>
             )}

@@ -18,22 +18,28 @@ export default function QualityCheckPage() {
       const sup = supplies.find(s => s.id === supplyId);
       const claimedGrade = sup?.claimedGrade || 'A';
       
+      // AI becomes much stricter: downgrade A to B to show realistic verification
+      const isDowngraded = claimedGrade === 'A';
+      const actualGrade = isDowngraded ? 'B' : claimedGrade;
+      
       setResults(prev => ({
         ...prev,
         [supplyId]: {
           passed: true,
           claimedGrade,
-          actualGrade: claimedGrade,
-          colorIndex: '98%',
-          damageRate: '0.4%',
-          confidence: '96.2%',
-          reason: 'Analisis citra spektral dan riwayat pemupukan Karsa menunjukkan mutu komoditas sempurna sesuai klaim.'
+          actualGrade,
+          colorIndex: isDowngraded ? '82%' : '98%',
+          damageRate: isDowngraded ? '4.5%' : '0.4%',
+          confidence: isDowngraded ? '87.4%' : '96.2%',
+          reason: isDowngraded 
+            ? 'Analisis citra spektral menemukan 12% sampel warna tidak seragam dan potensi penyusutan kadar air. Grade diturunkan untuk menjaga standar B2B.'
+            : 'Analisis citra spektral dan riwayat pemupukan Karsa menunjukkan mutu komoditas sempurna.'
         }
       }));
 
-      // Update Global State so passport is verified
+      // Update Global State so passport is verified (using actual downgraded grade)
       if (verifySupplyByAdmin) {
-        verifySupplyByAdmin(supplyId, claimedGrade);
+        verifySupplyByAdmin(supplyId, actualGrade);
       }
 
       setVerifying(null);
@@ -121,7 +127,7 @@ export default function QualityCheckPage() {
                       </div>
                       <div className="text-center">
                         <span className="text-overline">Grade AI Aktual</span>
-                        <p className="text-h2 font-black text-success">Grade {result.actualGrade}</p>
+                        <p className={`text-h2 font-black ${result.actualGrade === 'A' ? 'text-success' : 'text-warning'}`}>Grade {result.actualGrade}</p>
                       </div>
                       <div className="text-center">
                         <span className="text-overline">Indeks Warna</span>

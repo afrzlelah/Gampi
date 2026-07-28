@@ -91,7 +91,7 @@ export default function HarvestPassportPage() {
     statusBg = 'rgba(239,68,68,0.08)';
     statusBorder = 'rgba(239,68,68,0.2)';
     statusTitle = '🔒 TERKUNCI & TERJUAL';
-    statusDesc = 'Kontrak penyerapan telah disetujui. Stok dikunci otomatis oleh sistem AGRIDAYA.';
+    statusDesc = 'Kontrak penyerapan telah disetujui. Stok dikunci otomatis oleh sistem GAMPI.';
   } else if (isPublished) {
     statusBg = 'rgba(59,130,246,0.08)';
     statusBorder = 'rgba(59,130,246,0.2)';

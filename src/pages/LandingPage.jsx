@@ -123,7 +123,7 @@ export default function LandingPage() {
             </div>
             <div className="landing__orbit-center">
               <Sprout size={40} />
-              <span>AGRIDAYA</span>
+              <span>GAMPI</span>
             </div>
           </div>
         </motion.div>
@@ -202,7 +202,7 @@ export default function LandingPage() {
         <div className="landing__bottom-cta-content">
           <h2 className="text-h1">Siap Melihat <span className="gradient-text">Demo?</span></h2>
           <p className="text-body" style={{ color: 'var(--text-secondary)' }}>
-            Jelajahi seluruh fitur ekosistem AGRIDAYA melalui simulasi interaktif.
+            Jelajahi seluruh fitur ekosistem GAMPI melalui simulasi interaktif.
           </p>
           <motion.button
             className="btn btn-primary btn-lg"
@@ -220,7 +220,7 @@ export default function LandingPage() {
       <footer className="landing__footer">
         <div className="landing__footer-brand">
           <Sprout size={20} />
-          <span>AGRIDAYA</span>
+          <span>GAMPI</span>
         </div>
         <p>Prodi Teknologi Informasi — UIN Walisongo Semarang © 2026</p>
       </footer>

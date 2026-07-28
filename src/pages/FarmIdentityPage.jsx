@@ -32,7 +32,7 @@ export default function FarmIdentityPage() {
               <ShieldCheck size={14} /> Terdaftar Resmi
             </span>
           </h2>
-          <p className="text-caption">Identitas geospasial dan sertifikasi kebun petani mitra AGRIDAYA</p>
+          <p className="text-caption">Identitas geospasial dan sertifikasi kebun petani mitra GAMPI</p>
         </div>
       </div>
 

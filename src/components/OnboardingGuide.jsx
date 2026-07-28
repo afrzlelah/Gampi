@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ChevronLeft, X, Sprout, Award, ShoppingBag, FileText, Lock, ArrowRight } from 'lucide-react';
 
-const ONBOARDING_KEY = 'agridaya_onboarding_seen';
+const ONBOARDING_KEY = 'gampi_onboarding_seen';
 
 const steps = [
   {
-    title: 'Selamat Datang di AGRIDAYA! 🌾',
+    title: 'Selamat Datang di GAMPI! 🌾',
     subtitle: 'Platform B2B Demand-Driven untuk Rantai Pasok Pertanian Berkelanjutan',
-    content: 'AGRIDAYA menghubungkan Petani, Pembeli B2B (Hotel & UMKM), dan Investor dalam satu ekosistem terintegrasi.\n\nBerikut adalah panduan singkat alur simulasi yang dapat Anda coba.',
+    content: 'GAMPI menghubungkan Petani, Pembeli B2B (Hotel & UMKM), dan Investor dalam satu ekosistem terintegrasi.\n\nBerikut adalah panduan singkat alur simulasi yang dapat Anda coba.',
     icon: <Sprout size={48} />,
     color: '#10b981'
   },

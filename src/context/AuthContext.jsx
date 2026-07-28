@@ -29,7 +29,7 @@ export const AVAILABLE_ROLES = [
   },
   {
     id: 'admin',
-    name: 'Tim AGRIDAYA',
+    name: 'Tim GAMPI',
     roleLabel: 'Admin Ekosistem',
     color: '#059669',
   }

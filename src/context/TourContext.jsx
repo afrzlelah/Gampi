@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 
-const TOUR_STORAGE_KEY = 'agridaya_forced_tour_completed_v1';
-const TOUR_STEP_KEY = 'agridaya_forced_tour_current_step_v1';
+const TOUR_STORAGE_KEY = 'gampi_forced_tour_completed_v1';
+const TOUR_STEP_KEY = 'gampi_forced_tour_current_step_v1';
 
 export const STEPS = {
   NOT_STARTED: 0,
